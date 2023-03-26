@@ -16,6 +16,7 @@ class TodoAdapter extends TypeAdapter<Todo> {
       id: fields[0] as String,
       completed: fields[1] as bool,
       content: fields[2] as String,
+      subcontent: fields[3] as String,
     );
   }
 

@@ -1,7 +1,12 @@
 class Todo {
   final String id;
-  bool completed;
+  String subcontent;
   String content;
+  bool completed;
 
-  Todo({required this.id, this.completed = false, this.content = ''});
+  Todo(
+      {required this.id,
+      this.completed = false,
+      this.subcontent = '',
+      this.content = ''});
 }

@@ -65,4 +65,15 @@ class TodosService with ReactiveServiceMixin {
       return false;
     }
   }
+
+  bool updateTodoSubcontent(String id, String text) {
+    final index = _todos.value.indexWhere((todo) => todo.id == id);
+    if (index != -1) {
+      _todos.value[index].subcontent = text;
+      _saveToHive();
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
